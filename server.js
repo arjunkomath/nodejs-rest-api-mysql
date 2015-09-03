@@ -71,7 +71,7 @@ router.put('/:table/:id', function(req, res) {
 	.then(function(keys) {
 		var primary_key = keys[0].Column_name;
 		if(JSON.stringify(req.body) == '{}') {
-			res.status(204);
+			res.status(200);
 			res.json({
 				"success" : 0,
 				"message" : "Parameters missing"
@@ -79,9 +79,12 @@ router.put('/:table/:id', function(req, res) {
 			return false;
 		}
 		var update_string = '';
-		Object.keys(req.body).forEach(function(key) {
+		Object.keys(req.body).forEach(function(key, index) {
 			var val = req.body[key];
 			update_string += "`" + key + "` = '" + val + "'"; 
+			if(Object.keys(req.body).length != (index+1)) {
+				update_string += ',';
+			}
 		});
 		sequelize.query("UPDATE `"+TABLE_PREFIX+req.params.table+"` SET " + update_string + " WHERE `"+primary_key+"` = '"+req.params.id+"'", { type: sequelize.QueryTypes.UPDATE})
 		.then(function() {
@@ -180,17 +183,24 @@ router.delete('/:table/:id', function(req, res) {
 		.then(function() {
 			res.status(200);
 			res.json({
+				"success": 1,
 				"message": "Deleted"
 			});
 		})
 		.catch( function(err) {
 			res.status(404);
-			res.send(err.message);
+			res.send({
+				"success" : 0,
+				"message" : err.message
+			});
 		});
 	})
 	.catch( function(err) {
 		res.status(404);
-		res.send(err.message);
+		res.send({
+			"success" : 0,
+			"message" : err.message
+		});
 	});
 });
 
