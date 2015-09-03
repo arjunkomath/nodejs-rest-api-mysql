@@ -15,7 +15,7 @@ var TABLE_PREFIX = "prefix_";
 ```
 
 ##Create (POST)
-This method will create a new entry in the table with the paramaters that are posted.
+Create a new entry in the table with the parameters that are posted.
 
 ```
 POST http://www.example.com/api/table_name
@@ -64,7 +64,7 @@ GET http://www.example.com/api/table_name/id
 ```
 
 ##Update (PUT)
-This method will update an entry in the table with the paramaters that are put.
+Update an entry in the table with the parameters that are put.
 
 ```
 PUT http://www.example.com/api/table_name/id
@@ -86,7 +86,7 @@ PUT http://www.example.com/api/table_name/id
 ```
 
 ##Delete (DELETE)
-This method will delete an entry in the table.
+Delete an entry in the table.
 
 ```
 DELETE http://www.example.com/api/table_name/id
