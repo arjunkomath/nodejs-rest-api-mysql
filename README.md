@@ -100,5 +100,10 @@ DELETE http://www.example.com/api/table_name/id
 }
 ```
 
+##Pending Features
+- Pagination
+- Find by field
+- and more! :)
+
 ##Thank you.
 Arjun
