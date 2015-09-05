@@ -6,9 +6,9 @@ config.port = 3000;
 config.auth = false;
 
 //Database
-config.database = 'techulus_hr';
-config.username = 'root';
-config.password = 'root';
+config.database = 'database';
+config.username = 'username';
+config.password = 'password';
 config.table_prefix = '';
 
 //Pagination
