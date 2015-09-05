@@ -3,6 +3,7 @@
 
 - RESTful
 - Basic API Authentication
+- SQL Injection cleaning
 - Pagination Support
 - Easy to setup
 
@@ -114,9 +115,9 @@ DELETE http://www.example.com/api/table_name/id
 ```
 
 ##Pending Features
-- Pagination
+- Security Features
 - Find by field
 - and more! :)
 
 ##Thank you.
-Arjun
+Arjun | arjunkomath@gmail.com
