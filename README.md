@@ -7,7 +7,7 @@
 - Pagination Support
 - Easy to setup
 
-##Configure
+## Configure
 ```javascript
 config.port = 3000;
 
@@ -28,7 +28,7 @@ config.page_limit = 10;
 - Enter the database name, username and password for connecting to local mysql. Also, enter table prefix, if any.
 - `paginate` when true, enables pagination support in get request, and you can set the limit per page in `page_limit`
 
-##Create (POST)
+## Create (POST)
 Create a new entry in the table with the parameters that are posted.
 
 ```
@@ -50,7 +50,7 @@ POST http://www.example.com/api/table_name
 }
 ```
 
-##Read (GET)
+## Read (GET)
 Reads data from table.
 
 - Read Entire Table
@@ -77,7 +77,7 @@ GET http://www.example.com/api/table_name/id
 }
 ```
 
-##Update (PUT)
+## Update (PUT)
 Update an entry in the table with the parameters that are put.
 
 ```
@@ -99,7 +99,7 @@ PUT http://www.example.com/api/table_name/id
 }
 ```
 
-##Delete (DELETE)
+## Delete (DELETE)
 Delete an entry in the table.
 
 ```
@@ -114,10 +114,7 @@ DELETE http://www.example.com/api/table_name/id
 }
 ```
 
-##Pending Features
+## Pending Features
 - Security Features
 - Find by field
 - and more! :)
-
-##Thank you.
-Arjun | arjunkomath@gmail.com
